@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="atmFinder">
+<head>
+<title>ATM Locator</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description"
+	content="Simple Search Page for finding ATM Locations" />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/angular.min.js"></script>
+<script type="text/javascript" src="/assets/js/angular-route.min.js"></script>
+<script src="assets/js/atmSearchController.js"></script>
+</head>
+<body>
+	<div ng-controller="atmSearchController">
+		<br /> <br />
+		<h1>ATM Finder</h1>
+		
+		<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+		<p>
+		<form role="form">
+			<div class="form-group">
+				<input type="text" class="form-control"
+					placeholder="Enter City, Postal Code or Street name here to filter list"
+					ng-model="search" />
+			</div>
+			
+		</form>
+		</p>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Address</th>
+						<th>Geo Location</th>
+						<th>Distance</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="location in locations | filter:search ">
+						<td>{{location.address.housenumber}},
+							{{location.address.street}}, {{location.address.city}},
+							{{location.address.postalcode}}</td>
+						<td>{{location.address.geoLocation.lat}},
+							{{location.address.geoLocation.lng}}</td>
+						<td>{{location.distance}}</td>
+						<td>{{location.type}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
