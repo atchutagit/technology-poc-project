@@ -7,7 +7,7 @@ Overview:
 	1. Spring Boot
 	2. Spring MVC/REST
 	3. AngularJS for UI
-	4. Camel to consumer external REST API
+	4. Camel to consume external REST API
 	
 Features Implemented:
 ---------------------
