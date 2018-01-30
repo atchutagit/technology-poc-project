@@ -33,6 +33,7 @@ How to build and deploy:
 	3. Finally, run mvn install to get the WAR file for TOMCAT deployment. 
 		 - WAR file will be generated in <project-root>/target directory
 		 - Rename it to atm-finder.war before deploying it to TOMCAT
+	Note: You can also deploy a pre-packaged war file (available under this repo) for quick testing
 	
 How to Access and Test:
 ----------------------
