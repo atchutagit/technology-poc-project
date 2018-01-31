@@ -5,16 +5,16 @@ Overview:
 --------
 	This application has been created using following technologies:
 	1. Spring Boot
-	2. Spring MVC/REST
+	2. Spring MVC/REST, Spring Security
 	3. AngularJS for UI
 	4. Camel to consume external REST API
 	
 Features Implemented:
 ---------------------
-	1. A web application that provides REST api to create a list of ING ATMs in a given Dutch city
+	1. A web application that provides REST api to fetch a list of ING ATMs in a given Dutch city
 	2. Same web application provides a page to fetch and filter all the ATM locations
-	3. Apache Camel is used to call external API (Via Producer Template)
-	4. Spring Security is enabled for the Web Page and API  
+	3. Apache Camel is used to call external API (Via Camel Servlet)
+	4. Spring Security is enabled for the Web Page   
 
 Features not implemented:
 ------------------------
@@ -41,7 +41,6 @@ How to Access and Test:
 	2. Access Web Page using:
 		- http://localhost:8080/atm-finder (Replace PORT value if TOMCAT is not running on 8080)
 		- login using user/password
-	3. Access REST API using Browser.
-		- http://localhost:8080/atms/locatedin/Amsterdam (Replace PORT if TOMCAT is not running on 8080)
-		- Known issue. Even API is being prompted for login. Need to fix it. Please use browser to
-		  to test REST API output.
+	3. Access REST API 
+		- http://localhost:8080/atms/locations/cities?city=Amsterdam (Replace PORT if TOMCAT is not running on 8080)
+	

@@ -17,12 +17,19 @@
 <body>
 	<div ng-controller="atmSearchController">
 		<br /> <br />
-		<h1>ATM Finder</h1>
 		
-		<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+		<div class="row">
+		    <div class="col-xs-10">
+		        <h1>ATM Finder</h1>
+		    </div>
+		    <div  class="col-xs-2">
+		       	<h4 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h4>
+		        <form th:action="@{/logout}" method="post">
+		            <input type="submit" value="Sign Out"/>
+		        </form>
+		    </div>
+	    </div>
+  
 		<p>
 		<form role="form">
 			<div class="form-group">
