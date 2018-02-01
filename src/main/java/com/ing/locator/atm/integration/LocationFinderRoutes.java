@@ -11,7 +11,7 @@ public class LocationFinderRoutes extends RouteBuilder {
 	 @Override
 	 public void configure() throws Exception {
 		 
-		 from("servlet:///locations") 
+		 from("servlet:///locations")
 		    .setHeader("Content-Type", constant("application/json"))
 	        .setHeader("Accept", constant("application/json"))
 	        .setHeader(Exchange.HTTP_METHOD, constant("GET"))

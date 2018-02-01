@@ -15,10 +15,12 @@ Features Implemented:
 	2. Same web application provides a page to fetch and filter all the ATM locations
 	3. Apache Camel is used to call external API (Via Camel Servlet)
 	4. Spring Security is enabled for the Web Page   
+	5. Test Cases for REST interface and Web Security
 
-Features not implemented:
-------------------------
-	1. Unit tests
+Features not implemented yet:
+----------------------------
+	1. EhCache
+	2. Circuit Breaker
 
 Development Environment
 ------------------------
