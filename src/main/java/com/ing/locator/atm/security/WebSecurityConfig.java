@@ -18,7 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/atms/locations/*").permitAll()
                 .and()
             .formLogin()
-                .loginPage("/login")
+                .loginPage("/login").defaultSuccessUrl("/atm-finder")
                 .permitAll()
                 .and()
             .logout()

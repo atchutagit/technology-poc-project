@@ -51,7 +51,7 @@ public class AtmFinderWebSecurityTests {
 		this.mockMvc
             .perform(formLogin().user("user").password("password"))
             .andExpect(status().is3xxRedirection())
-            .andExpect(redirectedUrl("/"))
+            .andExpect(redirectedUrl("/atm-finder"))
             .andExpect(authenticated().withUsername("user"));
     }
 

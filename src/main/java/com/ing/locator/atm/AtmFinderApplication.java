@@ -1,5 +1,6 @@
 package com.ing.locator.atm;
 
+import org.apache.camel.component.hystrix.metrics.servlet.HystrixEventStreamServlet;
 import org.apache.camel.component.servlet.CamelHttpTransportServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -41,6 +42,16 @@ public class AtmFinderApplication {
         ServletRegistrationBean registration = new ServletRegistrationBean(new CamelHttpTransportServlet(), CAMEL_URL_MAPPING);
         registration.setName(CAMEL_SERVLET_NAME);
         return registration;
+    }
+    
+    @Bean
+    public HystrixEventStreamServlet hystrixServlet() {
+        return new HystrixEventStreamServlet();
+    }
+
+    @Bean
+    public ServletRegistrationBean hystrixServletRegistrationBean() {
+        return new ServletRegistrationBean(new HystrixEventStreamServlet(), "/hystrix.stream");
     }
 
 	public static void main(String[] args) {
