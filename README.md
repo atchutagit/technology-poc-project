@@ -1,4 +1,4 @@
-# ATM Finder 
+# Technology POC - ATM Finder 
 
 A quick POC demonstrating Spring Boot, Spring Security, REST, Apache Camel, EHCache and Hystrix Circuit Breaker
 
