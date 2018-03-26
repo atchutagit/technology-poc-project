@@ -16,8 +16,8 @@ Overview:
 Features Implemented:
 ---------------------
 	1. A REST API to fetch a list of ING ATMs in a given Dutch city, in pretty JSON format
-	2. Same web page to display and filter all the ATM locations. This web page calls REST API mentioned above.
-	3. Apache Camel is used to call external API (Via Camel Servlet)
+	2. A simple web page to display and filter all the ATM locations. This page calls REST API mentioned above.
+	3. Apache Camel is used to integrate and call external API (Via Camel Servlet)
 	4. Spring Security is enabled for the Web Page   
 	5. Test Cases for REST interface and Web Security
 	6. EHCache is implemented to cache list of all ATM locations.
