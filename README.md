@@ -55,6 +55,9 @@ How to Access and Test:
 		Step 3: Call the REST API again. This time response would be returned from cache. Circuit breaker will fall back to cache until the service dependency is resolved.
 		Step 4: Connect to network again and call the REST API and observe logs to see if normal flow is established
 	
-Applicaiton Home Page:
+
+
+Application Home Page:
+----------------------
 
 ![Home Page Screenshot](homepage.png?raw=true "Home Page")
