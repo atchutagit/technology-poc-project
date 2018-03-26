@@ -9,7 +9,7 @@
 	<packaging>war</packaging>
 
 	<name>ATM-Finder</name>
-	<description>Assignment Project using Spring and Camel</description>
+	<description>POC Project using Spring and Camel</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
