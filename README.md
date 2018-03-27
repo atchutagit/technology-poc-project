@@ -8,7 +8,7 @@ Overview:
 	1. Spring Boot
 	2. Spring MVC/REST, Spring Security
 	3. AngularJS for UI
-	4. Camel to consume external REST API
+	4. Camel to consume external REST API (Framework based on Enterprise Integration Patterns)
 	5. Camel-EHCache to cache data from external service
 	6. Camel-Hystrix for implementing Circuit Breaker pattern
 	7. JUnit for test cases
